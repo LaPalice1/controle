@@ -80,7 +80,8 @@ print(onote.valeur)
 print(onote.afficher)
 
 #7)
-notes_enregistrées =
+notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+notes_enregistrées.append(("eleve3", "math", 11))
+print(notes_enregistrées.afficher)
 
 #8)
-def moyenne_Notes(liste)
