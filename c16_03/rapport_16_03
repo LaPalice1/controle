@@ -1,0 +1,740 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/stidsem4/iut/2021/controle/gauthier.pervieux/c16_03
+collected 7 items
+
+test_16_03.py F.FFFFF                                                    [100%]
+
+=================================== FAILURES ===================================
+_____________________________ Test1603sute.test_10 _____________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
+
+    def test_10(self):
+        try:
+>           from .main  import Note
+
+test_16_03.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    #4)a)
+    def som(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    som(notes)
+    
+    #4)b)
+    def som2(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" and i[1] == "math" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    #4)c)
+    def moyenne_tuple(notes, eleve, matiere) :
+      somme = []
+      for i in notes :
+        if i[0] == eleve and i[1] == matiere :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    
+    
+    print(som(notes))
+    print(som2(notes))
+    print(moyenne_tuple(notes, "eleve2", "math"))
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    
+    
+    #5)
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    onote = onotes[1]
+    print(onote)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    #6)class Note:
+    class Note:
+      def __init__(self, eleve, matiere, valeur):
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+        self.afficher = ('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    print(onote.afficher)
+    
+    #7)
+    notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+    notes_enregistrées.append(("eleve3", "math", 11))
+>   print(notes_enregistrées.afficher)
+E   AttributeError: 'list' object has no attribute 'afficher'
+
+main.py:85: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
+
+    def test_10(self):
+        try:
+            from .main  import Note
+        except:
+>          assert False
+E          AssertionError: assert False
+
+test_16_03.py:96: AssertionError
+----------------------------- Captured stdout call -----------------------------
+13.0
+12.666666666666666
+13.5
+<c16_03.main.Note object at 0x7f3c5f7de280>
+eleve1
+physique
+15
+eleve eleve1 matiere physique note 15
+eleve1
+physique
+15
+<bound method Note.afficher of <c16_03.main.Note object at 0x7f3c5f7de280>>
+_____________________________ Test1603sute.test_4 ______________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
+
+    def test_4(self):
+        try:
+>           from main import moyenne_tuples
+E           ModuleNotFoundError: No module named 'main'
+
+test_16_03.py:16: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
+
+    def test_4(self):
+        try:
+            from main import moyenne_tuples
+        except ImportError:
+            try:
+>               from .main import moyenne_tuple as moyenne_tuples
+
+test_16_03.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    #4)a)
+    def som(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    som(notes)
+    
+    #4)b)
+    def som2(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" and i[1] == "math" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    #4)c)
+    def moyenne_tuple(notes, eleve, matiere) :
+      somme = []
+      for i in notes :
+        if i[0] == eleve and i[1] == matiere :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    
+    
+    print(som(notes))
+    print(som2(notes))
+    print(moyenne_tuple(notes, "eleve2", "math"))
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    
+    
+    #5)
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    onote = onotes[1]
+    print(onote)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    #6)class Note:
+    class Note:
+      def __init__(self, eleve, matiere, valeur):
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+        self.afficher = ('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    print(onote.afficher)
+    
+    #7)
+    notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+    notes_enregistrées.append(("eleve3", "math", 11))
+>   print(notes_enregistrées.afficher)
+E   AttributeError: 'list' object has no attribute 'afficher'
+
+main.py:85: AttributeError
+----------------------------- Captured stdout call -----------------------------
+13.0
+12.666666666666666
+13.5
+<c16_03.main.Note object at 0x7f3c5f880a90>
+eleve1
+physique
+15
+eleve eleve1 matiere physique note 15
+eleve1
+physique
+15
+<bound method Note.afficher of <c16_03.main.Note object at 0x7f3c5f880a90>>
+_____________________________ Test1603sute.test_5 ______________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
+
+    def test_5(self):
+        try:
+>           from .main  import Note, onotes
+
+test_16_03.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    #4)a)
+    def som(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    som(notes)
+    
+    #4)b)
+    def som2(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" and i[1] == "math" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    #4)c)
+    def moyenne_tuple(notes, eleve, matiere) :
+      somme = []
+      for i in notes :
+        if i[0] == eleve and i[1] == matiere :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    
+    
+    print(som(notes))
+    print(som2(notes))
+    print(moyenne_tuple(notes, "eleve2", "math"))
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    
+    
+    #5)
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    onote = onotes[1]
+    print(onote)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    #6)class Note:
+    class Note:
+      def __init__(self, eleve, matiere, valeur):
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+        self.afficher = ('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    print(onote.afficher)
+    
+    #7)
+    notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+    notes_enregistrées.append(("eleve3", "math", 11))
+>   print(notes_enregistrées.afficher)
+E   AttributeError: 'list' object has no attribute 'afficher'
+
+main.py:85: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
+
+    def test_5(self):
+        try:
+            from .main  import Note, onotes
+        except:
+>           assert False
+E           AssertionError: assert False
+
+test_16_03.py:35: AssertionError
+----------------------------- Captured stdout call -----------------------------
+13.0
+12.666666666666666
+13.5
+<c16_03.main.Note object at 0x7f3c5f7de8b0>
+eleve1
+physique
+15
+eleve eleve1 matiere physique note 15
+eleve1
+physique
+15
+<bound method Note.afficher of <c16_03.main.Note object at 0x7f3c5f7de8b0>>
+_____________________________ Test1603sute.test_6 ______________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_6>
+
+    def test_6(self):
+>       from .main import Note, onotes
+
+test_16_03.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    #4)a)
+    def som(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    som(notes)
+    
+    #4)b)
+    def som2(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" and i[1] == "math" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    #4)c)
+    def moyenne_tuple(notes, eleve, matiere) :
+      somme = []
+      for i in notes :
+        if i[0] == eleve and i[1] == matiere :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    
+    
+    print(som(notes))
+    print(som2(notes))
+    print(moyenne_tuple(notes, "eleve2", "math"))
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    
+    
+    #5)
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    onote = onotes[1]
+    print(onote)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    #6)class Note:
+    class Note:
+      def __init__(self, eleve, matiere, valeur):
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+        self.afficher = ('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    print(onote.afficher)
+    
+    #7)
+    notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+    notes_enregistrées.append(("eleve3", "math", 11))
+>   print(notes_enregistrées.afficher)
+E   AttributeError: 'list' object has no attribute 'afficher'
+
+main.py:85: AttributeError
+----------------------------- Captured stdout call -----------------------------
+13.0
+12.666666666666666
+13.5
+<c16_03.main.Note object at 0x7f3c5f71b9a0>
+eleve1
+physique
+15
+eleve eleve1 matiere physique note 15
+eleve1
+physique
+15
+<bound method Note.afficher of <c16_03.main.Note object at 0x7f3c5f71b9a0>>
+_____________________________ Test1603sute.test_8 ______________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
+
+    def test_8(self):
+        try:
+>           from .main import Note
+
+test_16_03.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    #4)a)
+    def som(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    som(notes)
+    
+    #4)b)
+    def som2(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" and i[1] == "math" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    #4)c)
+    def moyenne_tuple(notes, eleve, matiere) :
+      somme = []
+      for i in notes :
+        if i[0] == eleve and i[1] == matiere :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    
+    
+    print(som(notes))
+    print(som2(notes))
+    print(moyenne_tuple(notes, "eleve2", "math"))
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    
+    
+    #5)
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    onote = onotes[1]
+    print(onote)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    #6)class Note:
+    class Note:
+      def __init__(self, eleve, matiere, valeur):
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+        self.afficher = ('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    print(onote.afficher)
+    
+    #7)
+    notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+    notes_enregistrées.append(("eleve3", "math", 11))
+>   print(notes_enregistrées.afficher)
+E   AttributeError: 'list' object has no attribute 'afficher'
+
+main.py:85: AttributeError
+----------------------------- Captured stdout call -----------------------------
+13.0
+12.666666666666666
+13.5
+<c16_03.main.Note object at 0x7f3c5f71d8b0>
+eleve1
+physique
+15
+eleve eleve1 matiere physique note 15
+eleve1
+physique
+15
+<bound method Note.afficher of <c16_03.main.Note object at 0x7f3c5f71d8b0>>
+_____________________________ Test1603sute.test_9 ______________________________
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
+
+    def test_9(self):
+        try:
+>           from .main  import Note
+
+test_16_03.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    note1 = ('eleve1', 'math', 13)
+    note2 = ('eleve1', 'physique', 15)
+    note3 = ('eleve1', 'math', 13)
+    note4 = ('eleve1', 'eco', 12)
+    note5 = ('eleve1', 'eco', 13)
+    note6 = ('eleve1', 'math', 12)
+    note7 = ('eleve2', 'math', 13)
+    note8 = ('eleve2', 'math', 14)
+    
+    notes = [note1, note2, note3, note4, note5, note6,note7,note8]
+    
+    #4)a)
+    def som(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    som(notes)
+    
+    #4)b)
+    def som2(notes) :
+      somme = []
+      for i in notes :
+        if i[0] == "eleve1" and i[1] == "math" :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    #4)c)
+    def moyenne_tuple(notes, eleve, matiere) :
+      somme = []
+      for i in notes :
+        if i[0] == eleve and i[1] == matiere :
+          somme.append(i[2])
+      return sum(somme)/len(somme)
+    
+    
+    
+    print(som(notes))
+    print(som2(notes))
+    print(moyenne_tuple(notes, "eleve2", "math"))
+    
+    class Note:
+      def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+    
+    
+      def afficher(self):
+        print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    
+    
+    #5)
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    onote = onotes[1]
+    print(onote)
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    Note.afficher(onote)
+    
+    #6)class Note:
+    class Note:
+      def __init__(self, eleve, matiere, valeur):
+        self.eleve = eleve
+        self.matiere = matiere
+        self.valeur = valeur
+        self.afficher = ('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+    
+    
+    onotes = [(Note(note[0], note[1], note[2])) for note in notes]
+    print(onote.eleve)
+    print(onote.matiere)
+    print(onote.valeur)
+    print(onote.afficher)
+    
+    #7)
+    notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
+    notes_enregistrées.append(("eleve3", "math", 11))
+>   print(notes_enregistrées.afficher)
+E   AttributeError: 'list' object has no attribute 'afficher'
+
+main.py:85: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
+
+    def test_9(self):
+        try:
+            from .main  import Note
+        except:
+>          assert False
+E          AssertionError: assert False
+
+test_16_03.py:89: AssertionError
+----------------------------- Captured stdout call -----------------------------
+13.0
+12.666666666666666
+13.5
+<c16_03.main.Note object at 0x7f3c5f8650d0>
+eleve1
+physique
+15
+eleve eleve1 matiere physique note 15
+eleve1
+physique
+15
+<bound method Note.afficher of <c16_03.main.Note object at 0x7f3c5f8650d0>>
+=========================== short test summary info ============================
+FAILED test_16_03.py::Test1603sute::test_10 - AssertionError: assert False
+FAILED test_16_03.py::Test1603sute::test_4 - AttributeError: 'list' object ha...
+FAILED test_16_03.py::Test1603sute::test_5 - AssertionError: assert False
+FAILED test_16_03.py::Test1603sute::test_6 - AttributeError: 'list' object ha...
+FAILED test_16_03.py::Test1603sute::test_8 - AttributeError: 'list' object ha...
+FAILED test_16_03.py::Test1603sute::test_9 - AssertionError: assert False
+========================= 6 failed, 1 passed in 0.10s ==========================
