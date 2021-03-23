@@ -1,12 +1,12 @@
-============================= test session starts ==============================
+================================================ test session starts ================================================
 platform linux -- Python 3.9.2, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/stidsem4/iut/2021/controle/gauthier.pervieux/c16_03
 collected 7 items
 
-test_16_03.py F.FFFFF                                                    [100%]
+test_16_03.py F.FFFFF                                                                                         [100%]
 
-=================================== FAILURES ===================================
-_____________________________ Test1603sute.test_10 _____________________________
+===================================================== FAILURES ======================================================
+_______________________________________________ Test1603sute.test_10 ________________________________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
 
@@ -15,7 +15,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
 >           from .main  import Note
 
 test_16_03.py:94: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     note1 = ('eleve1', 'math', 13)
     note2 = ('eleve1', 'physique', 15)
@@ -118,11 +118,11 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
 E          AssertionError: assert False
 
 test_16_03.py:96: AssertionError
------------------------------ Captured stdout call -----------------------------
+----------------------------------------------- Captured stdout call ------------------------------------------------
 13.0
 12.666666666666666
 13.5
-<c16_03.main.Note object at 0x7f0ae7499580>
+<c16_03.main.Note object at 0x7ff50f1dfcd0>
 eleve1
 physique
 15
@@ -130,8 +130,8 @@ eleve eleve1 matiere physique note 15
 eleve1
 physique
 15
-<bound method Note.afficher of <c16_03.main.Note object at 0x7f0ae7499580>>
-_____________________________ Test1603sute.test_4 ______________________________
+<bound method Note.afficher of <c16_03.main.Note object at 0x7ff50f1dfcd0>>
+________________________________________________ Test1603sute.test_4 ________________________________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
 
@@ -154,7 +154,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
 >               from .main import moyenne_tuple as moyenne_tuples
 
 test_16_03.py:19: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     note1 = ('eleve1', 'math', 13)
     note2 = ('eleve1', 'physique', 15)
@@ -244,11 +244,11 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 E   AttributeError: 'list' object has no attribute 'afficher'
 
 main.py:85: AttributeError
------------------------------ Captured stdout call -----------------------------
+----------------------------------------------- Captured stdout call ------------------------------------------------
 13.0
 12.666666666666666
 13.5
-<c16_03.main.Note object at 0x7f0ae753ca00>
+<c16_03.main.Note object at 0x7ff50f284d60>
 eleve1
 physique
 15
@@ -256,8 +256,8 @@ eleve eleve1 matiere physique note 15
 eleve1
 physique
 15
-<bound method Note.afficher of <c16_03.main.Note object at 0x7f0ae753ca00>>
-_____________________________ Test1603sute.test_5 ______________________________
+<bound method Note.afficher of <c16_03.main.Note object at 0x7ff50f284d60>>
+________________________________________________ Test1603sute.test_5 ________________________________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
 
@@ -266,7 +266,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
 >           from .main  import Note, onotes
 
 test_16_03.py:33: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     note1 = ('eleve1', 'math', 13)
     note2 = ('eleve1', 'physique', 15)
@@ -369,11 +369,11 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
 E           AssertionError: assert False
 
 test_16_03.py:35: AssertionError
------------------------------ Captured stdout call -----------------------------
+----------------------------------------------- Captured stdout call ------------------------------------------------
 13.0
 12.666666666666666
 13.5
-<c16_03.main.Note object at 0x7f0ae74998b0>
+<c16_03.main.Note object at 0x7ff50f267ee0>
 eleve1
 physique
 15
@@ -381,8 +381,8 @@ eleve eleve1 matiere physique note 15
 eleve1
 physique
 15
-<bound method Note.afficher of <c16_03.main.Note object at 0x7f0ae74998b0>>
-_____________________________ Test1603sute.test_6 ______________________________
+<bound method Note.afficher of <c16_03.main.Note object at 0x7ff50f267ee0>>
+________________________________________________ Test1603sute.test_6 ________________________________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_6>
 
@@ -390,7 +390,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_6>
 >       from .main import Note, onotes
 
 test_16_03.py:41: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     note1 = ('eleve1', 'math', 13)
     note2 = ('eleve1', 'physique', 15)
@@ -480,11 +480,11 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 E   AttributeError: 'list' object has no attribute 'afficher'
 
 main.py:85: AttributeError
------------------------------ Captured stdout call -----------------------------
+----------------------------------------------- Captured stdout call ------------------------------------------------
 13.0
 12.666666666666666
 13.5
-<c16_03.main.Note object at 0x7f0ae7521100>
+<c16_03.main.Note object at 0x7ff50f1437c0>
 eleve1
 physique
 15
@@ -492,8 +492,8 @@ eleve eleve1 matiere physique note 15
 eleve1
 physique
 15
-<bound method Note.afficher of <c16_03.main.Note object at 0x7f0ae7521100>>
-_____________________________ Test1603sute.test_8 ______________________________
+<bound method Note.afficher of <c16_03.main.Note object at 0x7ff50f1437c0>>
+________________________________________________ Test1603sute.test_8 ________________________________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
 
@@ -502,7 +502,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
 >           from .main import Note
 
 test_16_03.py:67: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     note1 = ('eleve1', 'math', 13)
     note2 = ('eleve1', 'physique', 15)
@@ -592,11 +592,11 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 E   AttributeError: 'list' object has no attribute 'afficher'
 
 main.py:85: AttributeError
------------------------------ Captured stdout call -----------------------------
+----------------------------------------------- Captured stdout call ------------------------------------------------
 13.0
 12.666666666666666
 13.5
-<c16_03.main.Note object at 0x7f0ae753b0a0>
+<c16_03.main.Note object at 0x7ff50f283610>
 eleve1
 physique
 15
@@ -604,8 +604,8 @@ eleve eleve1 matiere physique note 15
 eleve1
 physique
 15
-<bound method Note.afficher of <c16_03.main.Note object at 0x7f0ae753b0a0>>
-_____________________________ Test1603sute.test_9 ______________________________
+<bound method Note.afficher of <c16_03.main.Note object at 0x7ff50f283610>>
+________________________________________________ Test1603sute.test_9 ________________________________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
 
@@ -614,7 +614,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
 >           from .main  import Note
 
 test_16_03.py:87: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     note1 = ('eleve1', 'math', 13)
     note2 = ('eleve1', 'physique', 15)
@@ -717,11 +717,11 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
 E          AssertionError: assert False
 
 test_16_03.py:89: AssertionError
------------------------------ Captured stdout call -----------------------------
+----------------------------------------------- Captured stdout call ------------------------------------------------
 13.0
 12.666666666666666
 13.5
-<c16_03.main.Note object at 0x7f0ae7512a00>
+<c16_03.main.Note object at 0x7ff50f268970>
 eleve1
 physique
 15
@@ -729,12 +729,12 @@ eleve eleve1 matiere physique note 15
 eleve1
 physique
 15
-<bound method Note.afficher of <c16_03.main.Note object at 0x7f0ae7512a00>>
-=========================== short test summary info ============================
+<bound method Note.afficher of <c16_03.main.Note object at 0x7ff50f268970>>
+============================================== short test summary info ==============================================
 FAILED test_16_03.py::Test1603sute::test_10 - AssertionError: assert False
-FAILED test_16_03.py::Test1603sute::test_4 - AttributeError: 'list' object ha...
+FAILED test_16_03.py::Test1603sute::test_4 - AttributeError: 'list' object has no attribute 'afficher'
 FAILED test_16_03.py::Test1603sute::test_5 - AssertionError: assert False
-FAILED test_16_03.py::Test1603sute::test_6 - AttributeError: 'list' object ha...
-FAILED test_16_03.py::Test1603sute::test_8 - AttributeError: 'list' object ha...
+FAILED test_16_03.py::Test1603sute::test_6 - AttributeError: 'list' object has no attribute 'afficher'
+FAILED test_16_03.py::Test1603sute::test_8 - AttributeError: 'list' object has no attribute 'afficher'
 FAILED test_16_03.py::Test1603sute::test_9 - AssertionError: assert False
-========================= 6 failed, 1 passed in 0.10s ==========================
+============================================ 6 failed, 1 passed in 0.09s ============================================
