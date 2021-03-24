@@ -41,8 +41,6 @@ print(som(notes))
 print(som2(notes))
 print(moyenne_tuple(notes, "eleve2", "math"))
 
-#5)
-
 class Note:
   def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
     self.eleve = eleve
@@ -54,21 +52,10 @@ class Note:
     print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
 
   def __str__(self):
-  return print(self.valeur)
+      return print(self.note)
 
 
-onote = Note('eleve1', 'maths', 13)
-print(onote.eleve)
-print(onote.matiere)
-print(onote.valeur)
-Note.afficher(onote)
-
-
-onotes = Note('eleve1', 'physique', 13)
-print(onote.eleve)
-print(onote.matiere)
-print(onote.valeur)
-Note.afficher(onote) 
+#5)
 
 onotes = [(Note(note[0], note[1], note[2])) for note in notes]
 onote = onotes[1]
@@ -78,30 +65,19 @@ print(onote.matiere)
 print(onote.valeur)
 Note.afficher(onote)
 
-#6)class Note
-
+#6)class Note:
 
 onotes = [(Note(note[0], note[1], note[2])) for note in notes]
 print(onote.eleve)
 print(onote.matiere)
 print(onote.valeur)
-print(onote.afficher)
+
 
 #7)
-notes_enregistrées = [(Note(note[0], note[1], note[2])) for note in notes]
-notes_enregistrées.append(("eleve3", "math", 11))
-print(notes_enregistrées.afficher)
+notes_enregistrées =
 
-#8)
-def moyenne_notes(notes_enregistrees):
-somme = []
-  for i in notes_enregistrees :
-      somme.append(i[2])
-  return sum(somme)/len(somme)
+def moyenne(notes_enregistrées) :
 
-
-
-#9-10
 class var_inst:
     classattr = 'instances'
     def __init__(self, eleve, matiere, valeur):
@@ -113,11 +89,9 @@ class var_inst:
         return (sum(valeur)/len(valeur))
     @classmethod
     def vider(cls)
-        return .clear
+        return var_inst.clear
+
+instances = [var_inst(x) for x in notes_enregistrées]
+    
     
 print(var_inst.moyenne(notes))
-
-#11
-
-
-
